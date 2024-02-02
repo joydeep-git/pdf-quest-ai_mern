@@ -1,5 +1,5 @@
-import { TailwindMerger } from "@/lib/Utils";
 import { ReactNode } from "react";
+import {TailwindMerger} from "@/lib/Utilities";
 
 const MaxWidthWrapper = ({ className, children }: { className?: string, children: ReactNode }) => {
 
