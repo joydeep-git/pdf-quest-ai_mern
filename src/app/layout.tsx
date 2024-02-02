@@ -1,7 +1,8 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { TailwindMerger } from "@/lib/Utils";
+import {TailwindMerger} from "@/lib/Utilities";
 
 const inter = Inter({ subsets: ["latin"] });
 
