@@ -1,5 +1,15 @@
-import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card";
+import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card.tsx";
 import {ReactNode} from "react";
+
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel.tsx";
+
+import {Card, CardContent} from "@/components/ui/card.tsx";
 
 const AboutCard = (
     {title, content, icon}:
