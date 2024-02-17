@@ -2,64 +2,65 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import { RegisterLink, LoginLink } from '@kinde-oss/kinde-auth-nextjs/server';
 
-// COMPONENTS
 import MaxWidthWrapper from './MaxWidthWrapper.tsx';
 import { GradientText } from './TextHighlighters.tsx';
 import { buttonVariants } from './ui/button.tsx';
 
-// ICON
-import { Menu, ArrowRight } from 'lucide-react';
+import { Menu, ChevronRight } from 'lucide-react';
 
 const Navbar = (): ReactNode => {
-    return (
-        <nav className='sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all'>
+  return (
+    <nav className='sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-20 bg-white/10 backdrop-blur-lg transition-all'>
 
-            <MaxWidthWrapper>
+      <MaxWidthWrapper>
 
-                <div className='flex h-14 items-center justify-between border-b border-zinc-200'>
-                    <Link
-                        className='flex z-40 font-semibold'
-                        href='/'>
+        <div className='flex h-14 items-center justify-between border-b border-zinc-200'>
+          <span className='flex z-40 font-semibold gap-1 md:gap-2 flex-row h-max items-baseline'>
 
-                        <GradientText>PDFQuest</GradientText>
+            <GradientText>
+              <Link href='/' className='text-xl rounded-sm'>PDFQuest</Link>
+            </GradientText>
 
-                    </Link>
+            <span className='text-xs float-end bottom-0 left-0 top-1 right'>
+              by ElecDroid
+            </span>
 
-                    <div className='hidden items-center space-x-4 sm:flex'>
+          </span>
 
-                        <Link
-                            href='/pricing'
-                            className={buttonVariants({
-                                variant: 'ghost',
-                                size: 'sm',
-                            })}>
-                            Pricing
-                        </Link>
+          <div className='hidden items-center space-x-4 sm:flex'>
 
-                        <LoginLink
-                            className={buttonVariants({
-                                variant: 'ghost',
-                                size: 'sm',
-                            })}>
-                            Sign in
-                        </LoginLink>
+            <Link
+              href='/pricing'
+              className={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+              })}>
+              Pricing
+            </Link>
 
-                        <RegisterLink
-                            className={buttonVariants({
-                                size: 'sm',
-                            })}>
-                            Get started{' '}
-                            <ArrowRight className='ml-1.5 h-5 w-5' />
-                        </RegisterLink>
+            <LoginLink
+              className={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+              })}>
+              Sign in
+            </LoginLink>
 
-                    </div>
-                </div>
+            <RegisterLink
+              className={buttonVariants({
+                size: 'sm',
+              })}>
+              Get Started
+              <ChevronRight className="ml-1.5 h-6 w-6" />
+            </RegisterLink>
 
+          </div>
+        </div>
 
-            </MaxWidthWrapper>
+      </MaxWidthWrapper>
 
-        </nav>
-    )
+    </nav>
+  )
 };
 
 export default Navbar;
