@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Link from 'next/link';
-import { RegisterLink, LoginLink } from '@kinde-oss/kinde-auth-nextjs/server';
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
 import MaxWidthWrapper from './MaxWidthWrapper.tsx';
 import { GradientText } from './TextHighlighters.tsx';
